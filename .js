@@ -24,7 +24,7 @@ pairElement("TTGA"); // return [["T","A"],["T","A"],["G","C"],["A","T"]]
 /***************   Solution #2     *****************************************************************************************/
 
 
-function pairElement(str) {
+function pairElement2(str) {
     let paired = [];
     // Function to check with strand to pair using switch statements
     let search = function(char){ // Same as:  function search(char){ 
@@ -51,6 +51,21 @@ function pairElement(str) {
 }
 
 
+
+
+/***************   Solution #3     *****************************************************************************************/
+
+function pairElement3(str) { // Create an object for pair lookup
+   let pairs = {
+     'A':'T',
+     'T':'A',
+     'C':'G',
+     'G':'C'
+   };
+   let arr = str.split('');  // Split str into an array of characters
+   
+   return arr.map(x => [x, pairs[x]]);   // Map each character in arr to create a 2D array of character matching pair
+  
 
 
 
