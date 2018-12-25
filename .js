@@ -64,7 +64,7 @@ function pairElement3(str) { // Create an object for pair lookup
    };
    let arr = str.split('');  // Split str into an array of characters
    
-   return arr.map(x => [x, pairs[x]]);   // Map each character in arr to create a 2D array of character matching pair
+   return arr.map(x => [x, pairs[x]]);   // Map each character in arr to create a 2D array of character and matching pair
   
 
 
